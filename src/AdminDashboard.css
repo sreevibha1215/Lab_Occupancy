@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #6d28d9, #9333ea);
+  min-height: 100vh;
+  margin: 0;
+  width: 100%;
+  color: #f3e8ff; /* global soft white text */
+}
+
+/* Main admin container */
+.admin-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 10px;
+  color: #f5f3ff;
+}
+
+/* Admin card */
+.admin-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  width: 85%;
+  max-width: 900px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeSlide 0.8s ease-in-out;
+  color: #f9fafb;
+}
+
+/* Subtle card hover */
+.admin-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 35px rgba(147, 51, 234, 0.4);
+}
+
+/* Dashboard header */
+.dashboard-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 8px;
+  animation: fadeIn 1s ease;
+}
+
+.dashboard-subtitle {
+  text-align: center;
+  color: #e9d5ff;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  animation: fadeIn 1.2s ease;
+}
+
+.section-title {
+  font-weight: 600;
+  color: #f3e8ff;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Timetable table */
+.timetable-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  animation: fadeIn 1s ease;
+}
+
+.timetable-table th,
+.timetable-table td {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 12px;
+  text-align: center;
+}
+
+.timetable-table th {
+  background-color: rgba(139, 92, 246, 0.5);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Hover effect */
+.timetable-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: 0.3s ease;
+}
+
+/* Buttons */
+.edit-btn,
+.delete-btn {
+  border: none;
+  padding: 8px 14px;
+  margin: 4px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #3b82f6;
+}
+.edit-btn:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.05);
+}
+
+.delete-btn {
+  background-color: #ef4444;
+}
+.delete-btn:hover {
+  background-color: #b91c1c;
+  transform: scale(1.05);
+}
+
+/* Add new timetable button */
+.add-btn {
+   background-color: #a78bfa;
+  color: white;
+  border: none;
+  padding: 1px 1px; /* reduced size */
+  border-radius: 8px; /* slightly smaller corners */
+  font-size: 0.9rem; /* smaller text */
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+.add-btn:hover {
+  background-color: #7c3aed;
+  transform: scale(1.05);
+  box-shadow: 0 5px 12px rgba(124, 58, 237, 0.5);
+}
+
+/* Form container */
+.form-container {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 25px;
+  margin-top: 25px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.15);
+  animation: fadeInUp 0.6s ease;
+  color: #fff;
+  backdrop-filter: blur(10px);
+}
+
+.form-title {
+  text-align: center;
+  color: #f3e8ff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.form-grid input {
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-grid input::placeholder {
+  color: #ddd6fe;
+}
+
+.form-grid input:focus {
+  border-color: #c4b5fd;
+  box-shadow: 0 0 6px rgba(196, 181, 253, 0.4);
+}
+
+/* Form buttons */
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.save-btn {
+  background-color: #10b981;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.3s;
+}
+.save-btn:hover {
+  background-color: #059669;
+  transform: scale(1.05);
+}
+
+.cancel-btn {
+  background-color: #f43f5e;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.3s;
+}
+.cancel-btn:hover {
+  background-color: #e11d48;
+  transform: scale(1.05);
+}
+
+/* No data */
+.no-data {
+  text-align: center;
+  color: #e9d5ff;
+  padding: 10px 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+/* Background + overlay (if you use an image) */
+.admin-bg {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-bg .overlay {
+  background: rgba(0, 0, 0, 0.55);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Glassmorphism classes */
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  z-index: 2;
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(25px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Animations */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
