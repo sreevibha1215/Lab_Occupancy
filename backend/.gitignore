@@ -1,6 +1,12 @@
-/venv
-/.env
+venv/
 __pycache__/
 *.pyc
-instance
+*.pyo
+*.pyd
+*.dll
+*.so
+*.dylib
+*.lib
+.env
+instance/
 *.sqlite3
