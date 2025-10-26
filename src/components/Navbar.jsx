@@ -13,8 +13,8 @@ function Navbar() {
   // Normalize path to prevent trailing slash mismatch
   const currentPath = location.pathname.replace(/\/$/, "");
 
-  // ✅ Show Logout only for Admin and CheckLab pages
-  const showLogout = currentPath === "/admin" || currentPath === "/checklab";
+  // ✅ Show Logout for Admin, CheckLab, ReserveLab, and MyReservations pages
+  const showLogout = currentPath === "/admin" || currentPath === "/checklab" || currentPath === "/reservelab" || currentPath === "/myreservations";
 
   return (
     <nav className="navbar">
