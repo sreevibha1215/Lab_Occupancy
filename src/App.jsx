@@ -4,6 +4,8 @@ import Login from "./pages/Login";
 import AdminDashboard from "./pages/AdminDashboard";
 import UserDashboard from "./pages/UserDashboard";
 import CheckLab from "./pages/CheckLab";
+import ReserveLab from "./pages/ReserveLab";
+import MyReservations from "./pages/MyReservations";
 import Navbar from "./components/Navbar";
 import "./App.css";
 
@@ -24,6 +26,8 @@ function MainApp() {
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/user" element={<UserDashboard />} />
         <Route path="/checklab" element={<CheckLab />} />
+        <Route path="/reservelab" element={<ReserveLab />} />
+        <Route path="/myreservations" element={<MyReservations />} />
       </Routes>
     </>
   );

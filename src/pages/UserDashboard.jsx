@@ -6,11 +6,10 @@ import "../App.css";
 function UserDashboard() {
   const navigate = useNavigate();
 
-  // Disable scrolling when this component mounts
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
-      document.body.style.overflow = "auto"; // re-enable when leaving
+      document.body.style.overflow = "auto";
     };
   }, []);
 
@@ -18,8 +17,8 @@ function UserDashboard() {
     <div
       className="user-dashboard-container"
       style={{
-        height: "100vh", // full screen height
-        overflow: "hidden", // prevent scroll
+        height: "100vh",
+        overflow: "hidden",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -80,32 +79,76 @@ function UserDashboard() {
           availability, and make the most of your time efficiently.
         </motion.p>
 
-        <motion.button
-          onClick={() => navigate("/checklab")}
-          whileHover={{
-            scale: 1.08,
-            boxShadow: "0 0 25px #a78bfa",
-          }}
-          whileTap={{ scale: 0.95 }}
-          style={{
-            background:
-              "linear-gradient(90deg, #6d28d9, #8b5cf6, #c084fc, #e9d5ff)",
-            backgroundSize: "300% 300%",
-            animation: "gradientMove 5s ease infinite",
-            border: "none",
-            color: "white",
-            padding: "0.9rem 2.2rem",
-            borderRadius: "50px",
-            fontSize: "1.1rem",
-            fontWeight: "600",
-            cursor: "pointer",
-            transition: "all 0.4s ease",
-            fontFamily: "'Poppins', sans-serif",
-            letterSpacing: "0.5px",
-          }}
-        >
-          🚀 Check Lab Availability
-        </motion.button>
+        <div style={{ display: "flex", gap: "15px", flexWrap: "wrap", justifyContent: "center" }}>
+          <motion.button
+            onClick={() => navigate("/checklab")}
+            whileHover={{ scale: 1.08, boxShadow: "0 0 25px #a78bfa" }}
+            whileTap={{ scale: 0.95 }}
+            style={{
+              background: "linear-gradient(90deg, #6d28d9, #8b5cf6, #c084fc, #e9d5ff)",
+              backgroundSize: "300% 300%",
+              animation: "gradientMove 5s ease infinite",
+              border: "none",
+              color: "white",
+              padding: "0.9rem 2.2rem",
+              borderRadius: "50px",
+              fontSize: "1.1rem",
+              fontWeight: "600",
+              cursor: "pointer",
+              transition: "all 0.4s ease",
+              fontFamily: "'Poppins', sans-serif",
+              letterSpacing: "0.5px",
+            }}
+          >
+            🚀 Check Lab Availability
+          </motion.button>
+
+          <motion.button
+            onClick={() => navigate("/reservelab")}
+            whileHover={{ scale: 1.08, boxShadow: "0 0 25px #f59e0b" }}
+            whileTap={{ scale: 0.95 }}
+            style={{
+              background: "linear-gradient(90deg, #f59e0b, #fbbf24, #fcd34d, #fef3c7)",
+              backgroundSize: "300% 300%",
+              animation: "gradientMove 5s ease infinite",
+              border: "none",
+              color: "white",
+              padding: "0.9rem 2.2rem",
+              borderRadius: "50px",
+              fontSize: "1.1rem",
+              fontWeight: "600",
+              cursor: "pointer",
+              transition: "all 0.4s ease",
+              fontFamily: "'Poppins', sans-serif",
+              letterSpacing: "0.5px",
+            }}
+          >
+            📝 Reserve a Lab
+          </motion.button>
+
+          <motion.button
+            onClick={() => navigate("/myreservations")}
+            whileHover={{ scale: 1.08, boxShadow: "0 0 25px #10b981" }}
+            whileTap={{ scale: 0.95 }}
+            style={{
+              background: "linear-gradient(90deg, #10b981, #34d399, #6ee7b7, #d1fae5)",
+              backgroundSize: "300% 300%",
+              animation: "gradientMove 5s ease infinite",
+              border: "none",
+              color: "white",
+              padding: "0.9rem 2.2rem",
+              borderRadius: "50px",
+              fontSize: "1.1rem",
+              fontWeight: "600",
+              cursor: "pointer",
+              transition: "all 0.4s ease",
+              fontFamily: "'Poppins', sans-serif",
+              letterSpacing: "0.5px",
+            }}
+          >
+            📋 My Reservations
+          </motion.button>
+        </div>
 
         <motion.div
           className="info-box"
@@ -123,8 +166,7 @@ function UserDashboard() {
             boxShadow: "inset 0 0 15px rgba(255, 255, 255, 0.4)",
           }}
         >
-          💡 <strong>Pro Tip:</strong> Stay updated with real-time lab
-          availability — plan smarter and save time!
+          💡 <strong>Pro Tip:</strong> Stay updated with real-time lab availability — plan smarter and save time!
         </motion.div>
       </motion.div>
 
